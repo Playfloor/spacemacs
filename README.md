@@ -224,8 +224,8 @@ For efficient searches we recommend to install `pt` ([the platinum searcher][]).
 
    ```sh
    cd ~
-   mv .emacs.d .emacs.d.bak
-   mv .emacs .emacs.bak
+   mv .emacs.d .emacs.d.old
+   mv .emacs .emacs.old
    ```
 
    Don't forget to backup and *remove* `~/.emacs` file otherwise Spacemacs
@@ -248,7 +248,15 @@ For efficient searches we recommend to install `pt` ([the platinum searcher][]).
    If you are running in terminal you'll also need to change font settings of
    your terminal.
 
-4. Launch Emacs. Spacemacs will automatically install the packages it requires.
+4. Launch Emacs.
+   Spacemacs' dotfile wizard installer will ask: 
+   What is your preferred editing style?  [Package cl is deprecated]
+-> Among the stars aboard the Evil flagship (vim)
+   On the planet Emacs in the Holy control tower (emacs)
+        !! Be sure to chose vim so you can quit  with :q! rather than C-x C-c
+        !! (control x, control c). You NEED the vim commands.
+
+   Spacemacs will automatically install the packages it requires.
    If you get an error regarding package downloads then you may try to disable
    the HTTPS protocol by starting Emacs with
 
